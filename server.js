@@ -12,6 +12,6 @@ dashing._protected = function(req, res, next) {
 */
 
 // Set your default dashboard here
-dashing.default_dashboard = 'main';
+//dashing.default_dashboard = 'main';
 
 dashing.start();
