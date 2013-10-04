@@ -23,6 +23,12 @@ class Dashing.Graph extends Dashing.Widget
       ]
     )
 
+
+    if @node.getAttribute('data-min')
+      @graph.min = parseInt(@node.getAttribute('data-min'))
+    if @node.getAttribute('data-max')
+      @graph.max = parseInt(@node.getAttribute('data-max'))
+
     @graph.series[0].data = @get('points') if @get('points')
 
     x_axis = new Rickshaw.Graph.Axis.Time(graph: @graph)
