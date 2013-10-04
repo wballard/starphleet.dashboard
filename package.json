@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "dashing-js": "~0.0.10"
+    "dashing-js": "git+https://github.com/wballard/dashing-js.git"
   },
   "engine": "node >= 0.8"
 }
