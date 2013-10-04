@@ -1,1 +1,6 @@
 node_modules
+.gitignore
+.profile.d
+.npm
+bin
+.release
