@@ -5,7 +5,11 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "dashing-js": "git+https://github.com/wballard/dashing-js.git"
+    "dashing-js": "git+https://github.com/wballard/dashing-js.git",
+    "forever-monitor": "~1.2.3"
+  },
+  "scripts": {
+    "start": "node forever.js"
   },
   "engine": "node >= 0.8"
 }
