@@ -15,5 +15,5 @@ setInterval(function() {
   points.push({x: ++last_x, y: active});
   console.log(points);
   send_event('cpu', {points: points});
-}, 5 * 1000);
+}, 1 * 1000);
 
