@@ -1,15 +1,16 @@
 {
   "name": "starphleet.dashboard",
   "description": "starphleet.dashboard",
-  "author": "<Put your name here>",
+  "author": "Will Ballard",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
     "dashing-js": "git+https://github.com/wballard/dashing-js.git",
-    "forever-monitor": "~1.2.3"
+    "shellscript": "~0.1.0",
+    "js-yaml": "~2.1.1"
   },
   "scripts": {
-    "start": "node forever.js"
+    "start": "node server.js"
   },
   "engine": "node >= 0.8"
 }
