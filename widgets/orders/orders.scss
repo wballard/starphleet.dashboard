@@ -47,7 +47,19 @@ $label-color:       rgba(255, 255, 255, 0.7);
         background-color: $background-error-color;
       }
 
+      &.failed {
+        background-color: $background-error-color;
+      }
+
       &.building {
+        background-color: $background-warn-color;
+      }
+
+      &.built {
+        background-color: $background-warn-color;
+      }
+
+      &.checking {
         background-color: $background-warn-color;
       }
 
