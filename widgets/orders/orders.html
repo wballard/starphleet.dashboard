@@ -1,0 +1,14 @@
+<h1 class="title" data-bind="title"></h1>
+
+<ul class="items list-nostyle">
+  <li class="item" data-foreach-item="items" data-bind-class="item.status">
+    <div class="label">
+      <span class="order" data-bind="item.order"></span>
+      <span class="at" data-bind="item.at"></span>
+    </div>
+    <div class="label">
+      <img class="avatar" data-bind-src="item.avatar_url" />
+      <span class="text" data-bind="item.text"></span>
+    </div>
+  </li>
+</ul>

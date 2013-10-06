@@ -1,0 +1,90 @@
+$value-color:              #FFF;
+$background-color:         #444;
+$background-ok-color:   #47a447;
+$background-error-color:  #d9534f;
+$background-warn-color: #ed9c28;
+
+$title-color:       rgba(255, 255, 255, 1);
+$label-color:       rgba(255, 255, 255, 0.7);
+
+.widget.widget-orders {
+
+  background-color: $background-color;
+  padding: 0px;
+  vertical-align: top;
+
+  .title {
+    color: $title-color;
+  }
+
+  ol, ul {
+    margin: 0px;
+    text-align: left;
+    color: $label-color;
+  }
+
+  ol {
+    list-style-position: inside;
+  }
+
+  li {
+  }
+
+  .list-nostyle {
+  }
+
+  .items{
+    list-style: none;
+
+    li {
+      padding: .25em;
+
+      &.online {
+        background-color: $background-ok-color;
+      }
+
+      &.offline {
+        background-color: $background-error-color;
+      }
+
+      &.building {
+        background-color: $background-warn-color;
+      }
+
+      .label {
+        color: $label-color;
+        font-size: 20px;
+        word-wrap: break-word;
+
+        .order {
+          text-align: left;
+	  padding-left: .25em;
+        }
+
+        .at {
+          text-align: left;
+          font-size: .6em;
+          padding-left: 2em;
+        }
+
+        .avatar {
+          width: 1em;
+          padding-left: .25em;
+        }
+
+        .sha {
+          text-align: left;
+          font-size: .6em;
+          padding-left: .25em;
+        }
+
+        .text {
+          text-align: left;
+          font-size: .6em;
+          padding-left: .5em;
+        }
+      }
+
+    }
+  }
+}
