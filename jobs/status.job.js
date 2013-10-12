@@ -22,5 +22,4 @@ setInterval(function() {
    order.at = moment(order.at * 1000).fromNow();
   });
   send_event('orders', {items: status.orders});
-  console.log(status);
 }, 1 * 1000);
