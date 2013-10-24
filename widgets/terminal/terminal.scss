@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #3276b1;
+
+$title-color:       rgba(255, 255, 255, 0.7);
+$moreinfo-color:    rgba(255, 255, 255, 0.3);
+
+$meter-background:  darken($background-color, 15%);
+
+// ----------------------------------------------------------------------------
+// Widget-meter styles
+// ----------------------------------------------------------------------------
+.widget-terminal {
+
+  background-color: $background-color;
+  margin: 0px !important;
+  padding: 0px !important;
+  text-align: left !important;
+
+  .terminal {
+    height: 100%;
+  }
+
+}
