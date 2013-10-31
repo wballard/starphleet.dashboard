@@ -18,7 +18,7 @@ class Dashing.Terminal extends Dashing.Widget
       .height($(@node).height() - 2*10)
 
     source = null
-    reconnect = ->
+    reconnect = =>
       source = new EventSource(document.location.origin + @node.getAttribute('data-stream'))
       source.onopen = (e) ->
         console.log("logstream opened")
