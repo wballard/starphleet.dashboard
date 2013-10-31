@@ -17,19 +17,24 @@ class Dashing.Terminal extends Dashing.Widget
       .width($(@node).width() - 2*10)
       .height($(@node).height() - 2*10)
 
-    source = new EventSource(document.location.origin + @node.getAttribute('data-stream'))
-    source.onopen = (e) ->
-      console.log("logstream opened", e, source)
+    source = null
+    reconnect = ->
+      source = new EventSource(document.location.origin + @node.getAttribute('data-stream'))
+      source.onopen = (e) ->
+        console.log("logstream opened")
 
-    source.onmessage = (e) ->
-      data = JSON.parse(e.data)
-      content = data.content.trimRight()
-      if content
-        terminal.echo content
+      source.onmessage = (e) ->
+        data = JSON.parse(e.data)
+        content = data.content.trimRight()
+        if content
+          terminal.echo content
 
-    source.onerror = (e) ->
-      console.log("logsream error")
-      if (e.readyState == EventSource.CLOSED)
-        console.log("logstream closed")
+      source.onerror = (e) ->
+        console.log("logsream error")
+        if (e.readyState == EventSource.CLOSED)
+          console.log("logstream closed")
+        else
+          setTimeout reconnect, 3000
+    reconnect()
 
 
