@@ -73,10 +73,17 @@ $label-color:       rgba(255, 255, 255, 0.7);
 	  padding-left: .25em;
         }
 
-        .at {
+        .at, .logfile {
           text-align: left;
-          font-size: .6em;
-          padding-left: 2em;
+          font-size: .8em;
+          padding-left: 1em;
+        }
+
+        .clickable {
+          cursor: pointer;
+          &:hover {
+            font-weight: bolder;
+          }
         }
 
         .avatar {
